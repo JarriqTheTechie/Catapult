@@ -43,14 +43,14 @@ Components are read from the following directory of your project.
 Components require two files to be created.     
 1. FooComponent.html eg. `NameComponent.html` 
 2. FooComponentComponent.py eg. `NameComponent.py` 
-
+<hr> 
 *templates/components/NameComponent.py*    
 
      class NameComponent:      
 	     def __init__(self, name):      
 	         self.name= name    
 
-   <br>
+<hr> 
    
 *templates/components/NameComponent.html*    
  
@@ -104,19 +104,26 @@ Component nesting is supported and doesn't require subclassing in the .py file. 
 ## API    
 #**render()** Render a component in a template    
     
-`{{ render("ProductComponent", name="Gatorade", price=2.25) }}`  <br>    
+`{{ render("ProductComponent", name="Gatorade", price=2.25) }}`  
+<hr>    
     
 #**render_inline()** Returning the string representation of a component    
     
- `render_inline('{{ render("ProductComponent", name="Gatorade", price=2.25) }}')`  <br>    
+ `render_inline('{{ render("ProductComponent", name="Gatorade", price=2.25) }}')`  
+<hr>     
     
 #**render_with_collection()** Render a component for each element in a collection    
-*sample collection*    
+*sample collection*  
+ 
  `fruit = [{"name": "apple", "vendor": "Super Value"}, {"name": "grapes", "vendor": "Buy for Less"}, {"name": "banana", "vendor": "Cost Right"}]`    
     
- {{ render_with_collection("FruitPickerComponent", "fruit", fruit=fruit)|safe }}    
+ 
+
+    {{ render_with_collection("FruitPickerComponent", "fruit", fruit=fruit)|safe }}  
+
+  
 This replaces `{% for fruit in fruits %}{% endfor %}`    
- <br>    
+<hr>     
     
 #**render_if()** Determine whether the component should render    
 If the result of the .render_if() method is False then the component will not render.     
@@ -130,7 +137,7 @@ If the result of the .render_if() method is False then the component will not re
               
 	        def render_if(self):      
 	            return self.fruit["name"] == "grapes"   
-
+<hr> 
  
  ## Roadmap 
 TODO
