@@ -1,7 +1,7 @@
 
   
 # Catapult  
-A framework to create reusable server rendered components with low coupling and easy testability.    
+A framework to create reusable server rendered view components with low coupling and easy testability.    
     
     
     
