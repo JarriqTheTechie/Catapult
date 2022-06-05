@@ -140,4 +140,6 @@ If the result of the .render_if() method is False then the component will not re
 <hr> 
  
  ## Roadmap 
-TODO
+Visual Studio Code & Pycharm Language Extension
+Component Previewer
+Component Create Commands
